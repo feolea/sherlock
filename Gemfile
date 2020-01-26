@@ -12,6 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'kaminari', '~> 1.1.1'
+gem 'acts-as-taggable-on', '~> 6.5.0'
 
 group :development, :test do
   gem 'byebug', '~> 11.1.1'
