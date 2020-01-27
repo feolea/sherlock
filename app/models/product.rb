@@ -10,7 +10,7 @@ class Product < ApplicationRecord
     text :tags do
       tags.map { |tag| tag.name }
     end
-    time :created_at
+    float :price
   end
 
   def tags=(tags)
