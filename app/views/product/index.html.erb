@@ -4,6 +4,8 @@
   Max Price<%= f.text_field :max_price %>
   Price<%= f.text_field :price %>
   Country<%= f.text_field :country %>
+  Order by<%= f.select(:sort_by, options_for_select([['Relevance', :score],['Price', :price]], :score)) %>
+  Sort order<%= f.select(:order, options_for_select([[:asc], [:desc]], :desc)) %>
   Search!<%= f.submit %>
 
   <% if @products.any? %>

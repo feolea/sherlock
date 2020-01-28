@@ -2,6 +2,8 @@
 
 Sherlock is a search page using Solr as engine with sunspot gem.
 
+You can combine any sort of fields to your search.
+
 This project depends on Ruby described at `.ruby-version` file, if you dont known Ruby, take a look
 at [this](https://www.ruby-lang.org/en/documentation/installation/) and it is a good idea to use a manager like `rvm`, take a look [here](https://rvm.io/rvm/install).
 

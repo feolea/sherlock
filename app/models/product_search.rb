@@ -4,10 +4,11 @@ class ProductSearch
   include ActiveModel::Model
 
   attr_accessor :query, :country, :page, :per_page
-  attr_accessor :min_price, :max_price, :price
+  attr_accessor :min_price, :max_price, :price, :sort_by, :order
 
   def search
     filter
+    sort
     paginate
     index.execute
     index.results
@@ -41,5 +42,9 @@ class ProductSearch
 
   def query_filter
     index.build { fulltext query } if query.present?
+  end
+
+  def sort
+    index.build { order_by(sort_by, order || :desc) } if sort_by.present?
   end
 end

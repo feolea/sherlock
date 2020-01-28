@@ -8,7 +8,10 @@ RSpec.describe ProductSearch, type: :model do
   it { is_expected.to respond_to(:min_price) }
   it { is_expected.to respond_to(:max_price) }
   it { is_expected.to respond_to(:price) }
-  it { is_expected.to respond_to(:cursor) }
+  it { is_expected.to respond_to(:page) }
+  it { is_expected.to respond_to(:per_page) }
+  it { is_expected.to respond_to(:sort_by) }
+  it { is_expected.to respond_to(:order) }
 
   describe '#search' do
     context 'without any filter' do
