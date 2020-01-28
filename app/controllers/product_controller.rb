@@ -15,5 +15,6 @@ class ProductController < ApplicationController
     params
       .require(:search)
       .permit(:query, :country, :page, :per_page, :min_price, :max_price, :price)
+      .merge({ page: params[:page] })
   end
 end

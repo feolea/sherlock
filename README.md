@@ -39,7 +39,6 @@ It will be on localhost:3000
 
 # Some considerations
  - I chose solr to try with and learn something new to me, but I ran into issues with this development instance that do not reindex items properly.
- - Another issue with the Suspot gem is with pagination, which is recomended to make with cursor, but unfortunately I discover that kaminari does not use cursor at 45' of second round, so pagination is not working at all.
  - Tests is unfinished, only wrote the scenarios and contexts to show an idea of what I would test..
  - To go to production, the indexing part of solr should be handled by some queue to not affect the update / create requests, and of corse using some real solr instance with replicas.
  - I regret that did not used elasticsearch with chewy gem that was my 2 main options as I started the test.(but in any case, it worths the experience!)
