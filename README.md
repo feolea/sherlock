@@ -21,7 +21,7 @@ After you've cloned the project,
 
 `rake db:migrate`
 
-`rake sunspot:solr:start` will start a solr development instance
+`rake sunspot:solr:start` will start a solr development instance at `localhost:8983`
 
 `rake db:seed` will load SpocketProducts.json file at project's root to db
 
@@ -35,7 +35,7 @@ Run the rails itself:
 
 `rails s`
 
-It will be on localhost:3000
+It will be on `localhost:3000`
 
 # Some considerations
  - I chose solr to try with and learn something new to me, but I ran into issues with this development instance that do not reindex items properly.
