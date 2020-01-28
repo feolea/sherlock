@@ -1,0 +1,25 @@
+<%= form_for @search, as: :search, url: root_path, method: :get do |f| %>
+  Search<%= f.text_field :query %>
+  Min Price<%= f.text_field :min_price %>
+  Max Price<%= f.text_field :max_price %>
+  Price<%= f.text_field :price %>
+  Country<%= f.text_field :country %>
+  Search!<%= f.submit %>
+
+  <% if @products.any? %>
+    <dl>
+      <% @products.each do |product| %>
+        <dt>
+          <h1><%= product.title %></h1>
+          <strong><%= product.country %></strong>
+        <dd>
+          <p><%= product.price %></p>
+          <p><%= product.description %></p>
+          <p><%= product.tag_list %></p>
+        </dd>
+        </dt>
+      <% end %>
+      </dl>
+      <%= paginate @products %>
+  <% end %>
+<% end %>

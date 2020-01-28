@@ -3,7 +3,7 @@
 class ProductSearch
   include ActiveModel::Model
 
-  attr_accessor :query, :country, :cursor
+  attr_accessor :query, :country, :page, :per_page
   attr_accessor :min_price, :max_price, :price
 
   def search
@@ -30,7 +30,7 @@ class ProductSearch
   end
 
   def paginate
-    index.build { paginate cursor: cursor.present? ? cursor : '*' }
+    index.build { paginate page: page, per_page: per_page }
   end
 
   def price_filter
